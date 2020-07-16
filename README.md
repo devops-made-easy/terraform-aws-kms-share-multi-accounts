@@ -29,3 +29,6 @@ module "kms_sharing" {
   user_policy      = file("${path.module}/xxxx.json.tpl")(optional)
 }
 ```
+## Share the Love
+
+Like this project? Please give it a ★ on  [our GitHub!](https://github.com/devops-made-easy/terraform-aws-kms-share-multi-accounts)(it helps us a lot)
