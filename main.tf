@@ -2,7 +2,7 @@ resource "aws_kms_key" "devops" {
   description         = "kms key decription"
   enable_key_rotation = true
   policy              = data.template_file.pqw.rendered
-  tags                = merge(var.tags, map("ApplicationComponent", "kms"))
+  tags                = merge(var.tags, tomap({ "ApplicationComponent" = "kms" }))
 }
 resource "aws_kms_alias" "alias" {
   name          = format("alias/%s", var.key_name)
